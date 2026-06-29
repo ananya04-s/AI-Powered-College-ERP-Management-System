@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="Athena AI Banner" width="100%">
+
 
 # 🎓 Athena AI
 ### Enterprise College ERP Management System
