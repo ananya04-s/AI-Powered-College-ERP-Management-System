@@ -1,0 +1,6 @@
+{
+  "name": "College ERP Management System",
+  "description": "A comprehensive AI-powered university enterprise planning portal supporting grade reporting, roll-calls, fee receipts, and placement forecasts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
