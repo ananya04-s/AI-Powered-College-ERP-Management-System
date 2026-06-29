@@ -1,307 +1,202 @@
 <div align="center">
 
-# 🎓 Athena AI
+<img src="assets/banner.png" alt="Athena AI Banner" width="100%">
 
+# 🎓 Athena AI
 ### Enterprise College ERP Management System
 
 <p align="center">
-<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600" width="100%" alt="Athena AI Banner"/>
-</p>
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge\&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge\&logo=express)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express)
 ![Gemini AI](https://img.shields.io/badge/Gemini-AI-8E75FF?style=for-the-badge)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge\&logo=postgresql)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql)
 
 ### Intelligent Campus Management • AI Analytics • Enterprise Automation
+
+</p>
 
 </div>
 
 ---
 
-# 🌟 Overview
+## 🚀 Overview
 
-**Athena AI** is a next-generation **Enterprise Resource Planning (ERP)** platform built specifically for higher education institutions. It unifies academic administration, student services, faculty operations, financial management, and AI-driven analytics into a single intelligent ecosystem.
+**Athena AI** is an enterprise-grade **AI-Powered College ERP Management System** that centralizes academic, administrative, financial, and student lifecycle management into one intelligent platform.
 
-Designed with enterprise architecture and modern user experience principles, Athena AI enables universities to automate workflows, improve operational efficiency, and make data-driven academic decisions.
-
----
-
-# ✨ Core Highlights
-
-🎓 Multi-Role Enterprise Portal
-
-🤖 AI Academic Assistant
-
-📊 Real-Time Analytics Dashboard
-
-🔐 Secure Role-Based Authentication
-
-📈 Student Performance Intelligence
-
-💰 Smart Fee Management
-
-📚 Digital Library Management
-
-🚌 Campus Transport Tracking
-
-🏠 Hostel Administration
-
-📄 Automated Report Generation
+Designed for modern universities and colleges, Athena AI enables institutions to automate operations, improve collaboration, monitor academic performance, and make data-driven decisions through powerful dashboards and AI-driven insights.
 
 ---
 
-# 👥 User Portals
+## ✨ Core Features
 
-## 👑 Super Administrator
+### 👑 Administration
+- Student & Faculty Management
+- Department & Course Management
+- Timetable Management
+- Examination Control
+- Placement Management
+- Analytics Dashboard
+- Announcement Center
 
-* University Overview
-* User & Role Management
-* Academic Configuration
-* Department Administration
-* Database Backup
-* System Audit Logs
+### 👨‍🏫 Faculty Portal
+- Attendance Management
+- Marks Entry
+- Assignment Management
+- Student Reports
+- Academic Announcements
+- Performance Analytics
 
----
+### 👨‍🎓 Student Portal
+- Attendance Tracking
+- Semester Results
+- CGPA Dashboard
+- Fee Payments
+- Digital Mark Sheets
+- Library Services
+- Hostel & Transport
+- Placement Status
 
-## 🏛 College Administrator
-
-* Student Lifecycle Management
-* Faculty Administration
-* Timetable Management
-* Examination Control
-* Placement Cell
-* Analytics Dashboard
-
----
-
-## 👨‍🏫 Faculty Portal
-
-* Attendance Management
-* Marks Entry
-* Assignment Management
-* Student Progress Reports
-* Academic Announcements
-* Performance Analytics
-
----
-
-## 👨‍🎓 Student Portal
-
-* Academic Dashboard
-* Attendance Tracking
-* Results & CGPA
-* Fee Payments
-* Digital Mark Sheets
-* Library Access
-* Hostel Services
-* Transport Tracking
-* Placement Status
+### 👨‍👩‍👧 Parent Portal
+- Attendance Monitoring
+- Performance Reports
+- Fee Status
+- Faculty Communication
+- Notifications
 
 ---
 
-## 👨‍👩‍👧 Parent Portal
+## 🤖 AI Capabilities
 
-* Academic Monitoring
-* Attendance Analytics
-* Fee Status
-* Faculty Communication
-* Performance Reports
-
----
-
-# 🤖 AI Intelligence Suite
-
-Athena integrates intelligent AI capabilities across the platform.
-
-* Student Performance Prediction
-* Placement Readiness Analysis
-* Attendance Risk Detection
-* Academic Recommendation Engine
-* AI Report Generation
-* AI Academic Chat Assistant
-* Personalized Student Insights
+- AI Student Performance Prediction
+- Placement Readiness Analysis
+- Attendance Risk Detection
+- AI Academic Assistant
+- Automated Report Generation
+- Personalized Student Recommendations
 
 ---
 
-# 📊 Enterprise Dashboard
+## 📊 Dashboard Analytics
 
-Interactive analytics including
-
-* Academic Performance
-* Attendance Heatmaps
-* Revenue Analytics
-* Placement Statistics
-* Department Performance
-* Student Growth Trends
-* Faculty Productivity
-* Library Analytics
-* Transport Reports
+- Student Performance
+- Attendance Heatmaps
+- Revenue Reports
+- Placement Statistics
+- Department Analytics
+- Faculty Performance
+- Library Reports
+- Transport Monitoring
 
 ---
 
-# 🛠 Technology Stack
+## 🛠 Technology Stack
 
 ### Frontend
-
-* React 19
-* TypeScript
-* Tailwind CSS
-* Recharts
-* Framer Motion
-* React Router
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Recharts
 
 ### Backend
-
-* Node.js
-* Express.js
-* TSX Runtime
-* Esbuild
+- Node.js
+- Express.js
 
 ### AI
-
-* Google Gemini API
+- Google Gemini API
 
 ### Database
-
-* PostgreSQL
-* JSON Local Persistence
+- PostgreSQL
 
 ### Security
-
-* JWT Authentication
-* Role-Based Access Control
-* AES-256 Encryption
-* Protected APIs
+- JWT Authentication
+- Role-Based Access Control
+- AES-256 Encryption
 
 ---
 
-# 🗂 Enterprise Modules
+## 📂 Project Structure
 
-* Student Information System
-* Faculty Management
-* Attendance Management
-* Examination System
-* Results Processing
-* Fee Management
-* Library Management
-* Hostel Management
-* Transport Management
-* Placement Portal
-* Notification Center
-* Leave Management
-* AI Assistant
-* Analytics Engine
-
----
-
-# 📈 Database Design
-
-Athena is powered by a normalized relational schema containing
-
-* Users
-* Roles
-* Students
-* Faculty
-* Departments
-* Courses
-* Subjects
-* Attendance
-* Marks
-* Results
-* Fees
-* Payments
-* Library
-* Hostel
-* Transport
-* Placements
-* Companies
-* Notifications
-* Leave Requests
-* Announcements
+```text
+Athena-AI/
+│
+├── client/
+├── server/
+├── database/
+├── api/
+├── components/
+├── pages/
+├── assets/
+│   └── banner.png
+├── public/
+├── README.md
+└── package.json
+```
 
 ---
 
-# 🚀 Installation
-
-Install dependencies
+## 🚀 Installation
 
 ```bash
+git clone https://github.com/yourusername/Athena-AI.git
+
+cd Athena-AI
+
 npm install
-```
 
-Configure environment variables
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
-Run development server
-
-```bash
 npm run dev
 ```
 
-Production build
+---
 
-```bash
-npm run build
-```
+## 📸 Screenshots
+
+| Login | Student Dashboard |
+|-------|-------------------|
+| Add Screenshot | Add Screenshot |
+
+| Faculty Dashboard | Admin Dashboard |
+|-------------------|-----------------|
+| Add Screenshot | Add Screenshot |
+
+| Analytics | AI Assistant |
+|-----------|--------------|
+| Add Screenshot | Add Screenshot |
 
 ---
 
-# 📸 Screenshots
+## 🔮 Future Enhancements
 
-Add screenshots of
-
-* Login
-* Student Dashboard
-* Faculty Dashboard
-* Admin Dashboard
-* Parent Portal
-* Analytics Dashboard
-* AI Assistant
+- Face Recognition Attendance
+- AI Timetable Generator
+- Blockchain Certificate Verification
+- Mobile Application
+- Online Examination Portal
+- Live GPS Bus Tracking
+- Smart Campus IoT Integration
 
 ---
 
-# 🔮 Roadmap
+## 👩‍💻 Developer
 
-* Face Recognition Attendance
-* Mobile Application
-* AI Timetable Generator
-* Smart Campus IoT Integration
-* Online Examination Platform
-* Blockchain Certificate Verification
-* Live Bus GPS Tracking
-* AI Career Advisor
+**Ananya S**
 
----
+🎓 B.E. Artificial Intelligence & Machine Learning
 
-# 👩‍💻 Developed By
+📧 **ananya.bolar@gmail.com**
 
-## **Ananya S**
-
-Bachelor of Engineering
-
-Artificial Intelligence & Machine Learning
-
-📧 **[ananya.bolar@gmail.com](mailto:ananya.bolar@gmail.com)**
-
-💼 **LinkedIn**
-
-https://www.linkedin.com/in/ananyabolar/
+💼 **LinkedIn:** https://www.linkedin.com/in/ananyabolar/
 
 ---
 
 <div align="center">
 
-## ⭐ If you found Athena AI useful, consider giving this repository a Star!
+## ⭐ Star this repository if you found it useful!
 
-### **Transforming Education Through Intelligent Campus Management**
-
-Built with ❤️ using React, Node.js, PostgreSQL & Gemini AI
+### Empowering Educational Institutions Through Intelligent Digital Transformation
 
 </div>
 
