@@ -7,6 +7,14 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+@utility dark {
+  &:where(.dark, .dark *) {
+    @content;
+  }
+}
+
+@variant dark (&:where(.dark, .dark *));
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -36,4 +44,63 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(55, 65, 81, 0.5);
+}
+
+/* Premium Global Dark Theme Overrides */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .bg-white {
+  background-color: var(--color-slate-900) !important;
+}
+
+.dark .text-slate-900 {
+  color: var(--color-slate-100) !important;
+}
+
+.dark .text-slate-800 {
+  color: var(--color-slate-200) !important;
+}
+
+.dark .text-slate-700 {
+  color: var(--color-slate-300) !important;
+}
+
+.dark .text-slate-600 {
+  color: var(--color-slate-400) !important;
+}
+
+.dark .border-slate-100 {
+  border-color: rgba(51, 65, 85, 0.45) !important;
+}
+
+.dark .border-slate-200 {
+  border-color: rgba(51, 65, 85, 0.6) !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: var(--color-slate-950) !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+.dark input, .dark select, .dark textarea {
+  background-color: var(--color-slate-950) !important;
+  color: var(--color-slate-100) !important;
+  border-color: rgba(51, 65, 85, 0.6) !important;
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+  color: var(--color-slate-500) !important;
 }

@@ -19,7 +19,9 @@ import {
   CheckCircle,
   HelpCircle,
   TrendingUp,
-  Award
+  Award,
+  Sun,
+  Moon
 } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import Chatbot from './components/Chatbot';
@@ -31,6 +33,24 @@ import ParentPortal from './components/ParentPortal';
 import { UserRole } from './types';
 
 export default function App() {
+  // Theme state
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    return (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
+  });
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
+
   // Authentication states
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState<any>(null);
@@ -322,7 +342,7 @@ export default function App() {
 
   // Unified Central ERP shell layout for logged-in users
   return (
-    <div className="min-h-screen bg-slate-50/30 text-slate-800 flex flex-col md:flex-row font-sans">
+    <div className="min-h-screen bg-slate-50/30 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col md:flex-row font-sans transition-colors duration-200">
       {/* Sidebar navigation */}
       <div className="hidden md:block">
         <Sidebar 
@@ -335,22 +355,22 @@ export default function App() {
       </div>
 
       {/* Main Container Shell */}
-      <div className="flex-1 min-h-screen flex flex-col overflow-hidden">
+      <div className="flex-1 min-h-screen flex flex-col overflow-hidden bg-slate-50/30 dark:bg-slate-950 transition-colors duration-200">
         {/* Header toolbar */}
-        <header className="h-16 bg-white border-b border-slate-100 flex items-center justify-between px-6 z-20">
+        <header className="h-16 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800/60 flex items-center justify-between px-6 z-20 transition-colors duration-200">
           <div className="flex items-center gap-4">
             {/* Mobile Sidebar toggle trigger */}
             <button 
               id="mobile-sidebar-toggle"
               onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
-              className="md:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg"
+              className="md:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg"
             >
               <Menu className="w-5 h-5" />
             </button>
 
             {/* Global Search Bar input */}
             <div className="relative">
-              <div className="bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200/50 flex items-center gap-2 w-64">
+              <div className="bg-slate-100 dark:bg-slate-800/50 px-3 py-1.5 rounded-xl border border-slate-200/50 dark:border-slate-700/50 flex items-center gap-2 w-64">
                 <Search className="w-4 h-4 text-slate-400" />
                 <input 
                   id="global-search"
@@ -358,13 +378,13 @@ export default function App() {
                   placeholder="Global search USNs or names..." 
                   value={globalSearchQuery}
                   onChange={(e) => handleGlobalSearch(e.target.value)}
-                  className="bg-transparent focus:outline-none text-xs text-slate-700 w-full"
+                  className="bg-transparent focus:outline-none text-xs text-slate-700 dark:text-slate-200 w-full"
                 />
               </div>
 
               {/* Search dropdown results */}
               {globalSearchQuery && (
-                <div id="search-dropdown" className="absolute left-0 mt-2 w-80 bg-white border border-slate-100 rounded-xl shadow-2xl p-2.5 space-y-2 z-50">
+                <div id="search-dropdown" className="absolute left-0 mt-2 w-80 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl shadow-2xl p-2.5 space-y-2 z-50">
                   <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider font-mono block mb-1.5">Rosters Search Results</span>
                   {globalSearchResults.map((res, i) => (
                     <button
@@ -374,9 +394,9 @@ export default function App() {
                         setCurrentTab(res.tab);
                         setGlobalSearchQuery('');
                       }}
-                      className="w-full text-left p-2 hover:bg-slate-50 rounded-lg transition-colors border border-transparent hover:border-slate-100"
+                      className="w-full text-left p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors border border-transparent hover:border-slate-100 dark:hover:border-slate-800 cursor-pointer"
                     >
-                      <h4 className="text-xs font-bold text-slate-800">{res.title}</h4>
+                      <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200">{res.title}</h4>
                       <p className="text-[10px] text-slate-400">{res.subtitle}</p>
                     </button>
                   ))}
@@ -388,19 +408,33 @@ export default function App() {
             </div>
           </div>
 
-          {/* Quick Notifications panel */}
-          <div className="flex items-center gap-4">
-            <div className="relative p-2 text-slate-600 hover:bg-slate-100 rounded-full cursor-pointer">
+          {/* Quick Notifications & Theme panel */}
+          <div className="flex items-center gap-3">
+            {/* Global Theme Switcher */}
+            <button
+              id="theme-toggle"
+              onClick={toggleTheme}
+              className="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer transition-colors"
+              title={theme === 'light' ? 'Switch to Dark Theme' : 'Switch to Light Theme'}
+            >
+              {theme === 'light' ? (
+                <Moon className="w-4.5 h-4.5" />
+              ) : (
+                <Sun className="w-4.5 h-4.5 text-amber-400" />
+              )}
+            </button>
+
+            <div className="relative p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full cursor-pointer">
               <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-amber-500 rounded-full" />
               <Bell className="w-4.5 h-4.5" />
             </div>
 
-            <div className="flex items-center gap-2.5 pl-3 border-l border-slate-100">
-              <div className="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 font-extrabold flex items-center justify-center text-xs font-display">
+            <div className="flex items-center gap-2.5 pl-3 border-l border-slate-100 dark:border-slate-800">
+              <div className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 font-extrabold flex items-center justify-center text-xs font-display border border-indigo-100/30">
                 {currentUser?.name.substring(0, 2).toUpperCase()}
               </div>
               <div className="hidden sm:block">
-                <h4 className="text-xs font-bold text-slate-800">{currentUser?.name}</h4>
+                <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200">{currentUser?.name}</h4>
                 <span className="text-[9px] text-amber-600 font-bold tracking-wider uppercase font-mono">{currentUser?.role}</span>
               </div>
             </div>
@@ -419,23 +453,23 @@ export default function App() {
           ) : currentTab === 'announcements' ? (
             /* Unified bulletin log list */
             <div className="space-y-6 max-w-4xl mx-auto">
-              <div className="border-b border-slate-100 pb-4">
-                <h2 className="text-lg font-bold text-slate-900 font-display">Academic Bulletins & Notifications</h2>
-                <p className="text-xs text-slate-500">Live operational news and schedules</p>
+              <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
+                <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 font-display">Academic Bulletins & Notifications</h2>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Live operational news and schedules</p>
               </div>
 
               <div className="space-y-4">
                 {announcements.map((ann, idx) => (
-                  <div key={idx} className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm space-y-3">
+                  <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800/60 p-6 shadow-sm space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-[10px] uppercase font-mono font-bold text-amber-600 bg-amber-500/10 px-2.5 py-0.5 rounded border border-amber-500/15">
                         {ann.category}
                       </span>
                       <span className="text-[10px] text-slate-400 font-mono">{ann.date}</span>
                     </div>
-                    <h3 className="text-sm font-bold text-slate-800 font-display">{ann.title}</h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">{ann.content}</p>
-                    <div className="flex justify-between items-center pt-3 border-t border-slate-50 text-[10px] text-slate-400 font-mono">
+                    <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100 font-display">{ann.title}</h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{ann.content}</p>
+                    <div className="flex justify-between items-center pt-3 border-t border-slate-50 dark:border-slate-800/50 text-[10px] text-slate-400 font-mono">
                       <span>Posted by: {ann.createdBy}</span>
                       <span>Audience: {ann.targetAudience}</span>
                     </div>
