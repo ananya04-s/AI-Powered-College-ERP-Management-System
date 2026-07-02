@@ -1,207 +1,101 @@
-<div align="center">
+# Athena College ERP Management System
 
-
-
-# 🎓 Athena AI
-### Enterprise College ERP Management System
-
-<p align="center">
-
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express)
-![Gemini AI](https://img.shields.io/badge/Gemini-AI-8E75FF?style=for-the-badge)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql)
-
-### Intelligent Campus Management • AI Analytics • Enterprise Automation
-
-</p>
-
-</div>
+Athena is a premium, enterprise-level **AI-Powered College ERP Management System** designed to streamline academic operations, financial audits, student progress forecasting, and library logistics on a unified full-stack architecture.
 
 ---
 
-## 🚀 Overview
+## 🛠️ Tech Stack & Architecture
 
-**Athena AI** is an enterprise-grade **AI-Powered College ERP Management System** that centralizes academic, administrative, financial, and student lifecycle management into one intelligent platform.
+Athena is designed with a modern, high-performance distributed architecture:
 
-Designed for modern universities and colleges, Athena AI enables institutions to automate operations, improve collaboration, monitor academic performance, and make data-driven decisions through powerful dashboards and AI-driven insights.
-
----
-
-## ✨ Core Features
-
-### 👑 Administration
-- Student & Faculty Management
-- Department & Course Management
-- Timetable Management
-- Examination Control
-- Placement Management
-- Analytics Dashboard
-- Announcement Center
-
-### 👨‍🏫 Faculty Portal
-- Attendance Management
-- Marks Entry
-- Assignment Management
-- Student Reports
-- Academic Announcements
-- Performance Analytics
-
-### 👨‍🎓 Student Portal
-- Attendance Tracking
-- Semester Results
-- CGPA Dashboard
-- Fee Payments
-- Digital Mark Sheets
-- Library Services
-- Hostel & Transport
-- Placement Status
-
-### 👨‍👩‍👧 Parent Portal
-- Attendance Monitoring
-- Performance Reports
-- Fee Status
-- Faculty Communication
-- Notifications
+- **Frontend Core**: React 19, TypeScript, Tailwind CSS, Recharts (visual data analytics), jsPDF (encrypted grade sheet/receipt downloads).
+- **Backend Core**: Express, Node.js, TSX (runtime), Esbuild (production bundle compilation).
+- **AI Modules**: Gemini 3.5 Flash Model integration leveraging programmatic database contexts for real-time forecasting.
+- **Data Persistence**: Local-first relational JSON engine on Node.js to enable instantaneous, configuration-free, single-click deployments.
 
 ---
 
-## 🤖 AI Capabilities
+## 🚀 Key Features & Role Portals
 
-- AI Student Performance Prediction
-- Placement Readiness Analysis
-- Attendance Risk Detection
-- AI Academic Assistant
-- Automated Report Generation
-- Personalized Student Recommendations
+### 1. Super Admin & College Admin Dashboard
+- ** Roster Audits**: Core registry logs managing students, departments, and course schemas.
+- ** Advisor Directory**: Assignment details for faculty, experience joined metrics, and contact pathways.
+- ** Database Security Hub**: Complete AES-256 encrypted database snapshot backup logging with geographic replication summaries.
 
----
+### 2. Faculty Portal
+- ** Roll-Call Registry**: Instant daily student attendance logs compiled directly into aggregate averages.
+- ** Grade Locker**: Direct assessment entry forms to lock and publish results to ward profiles.
+- ** Bulletin Publisher**: Post academic advisories, exam timetables, or alerts instantly to targeted groups.
 
-## 📊 Dashboard Analytics
+### 3. Student Portal
+- ** Academic Profile**: Real-time CGPA indexes, aggregate attendance gauges, and academic alerts.
+- ** Digital Transcripts**: Generate certified mark sheets as high-contrast print-ready PDFs using jsPDF.
+- ** Fee Ledger**: Simulated secure payment gateway to settle balances and generate formal transaction receipts.
+- ** Central Library Catalog**: Real-time stack search and borrow mechanism with digital checkout capabilities.
+- ** live Transit Tracking**: Real-time simulated GPS tracking map showing assigned vehicle coordinates and stops.
 
-- Student Performance
-- Attendance Heatmaps
-- Revenue Reports
-- Placement Statistics
-- Department Analytics
-- Faculty Performance
-- Library Reports
-- Transport Monitoring
+### 4. Parent Portal
+- ** Ward Analytics**: Direct visual metrics tracking ward CGPA against class averages.
+- ** Attendance Monitors**: Verification logs and early-alert warning indicators.
+- ** Advisor Directory**: Direct contact pipelines with assigned faculty mentors.
 
----
-
-## 🛠 Technology Stack
-
-### Frontend
-- React 19
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Recharts
-
-### Backend
-- Node.js
-- Express.js
-
-### AI
-- Google Gemini API
-
-### Database
-- PostgreSQL
-
-### Security
-- JWT Authentication
-- Role-Based Access Control
-- AES-256 Encryption
+### 5. AI Coordinator ("Athena")
+- ** Conversational Chat**: Answer structural queries, retrieve student ranks, or look up schedules.
+- ** Placement Forecasts**: Deep learning probability analysis predicting career placements based on core merit scores.
+- ** Risk Prognosis**: Automatically alert and summarize student dropout risk parameters based on attendance and grade trends.
 
 ---
 
-## 📂 Project Structure
+## 💾 Relational Database Schema
 
-```text
-Athena-AI/
-│
-├── client/
-├── server/
-├── database/
-├── api/
-├── components/
-├── pages/
-├── assets/
-│   └── banner.png
-├── public/
-├── README.md
-└── package.json
-```
+Athena utilizes a structured relational database model comprising:
 
----
-
-## 🚀 Installation
-
-```bash
-git clone https://github.com/yourusername/Athena-AI.git
-
-cd Athena-AI
-
-npm install
-
-npm run dev
-```
+1. `users`: Master credential directory (role-based profiles).
+2. `students`: Enrolled profiles, mentors, fee statuses, and campus routes.
+3. `faculty`: Designated department chairs, qualifications, and subject codes.
+4. `departments` & `courses`: Mapped operational faculties.
+5. `subjects`: Curriculums, credits, and faculty ownership.
+6. `attendance`: Roll-call histories.
+7. `marks` & `results`: Term grades and SGPA indices.
+8. `fees` & `payments`: Billing ledgers and UPI transaction refs.
+9. `library_books` & `issued_books`: Central catalog issues and borrowing registries.
+10. `hostel_rooms` & `bus_routes`: Campus facilities mapping.
+11. `leave_requests`: Leave authorizations.
+12. `announcements`: Global bulletin logs.
 
 ---
 
-## 📸 Screenshots
+## ⚙️ Installation & Development Setup
 
-| Login | Student Dashboard |
-|-------|-------------------|
-| Add Screenshot | Add Screenshot |
+1. **Install Base Dependencies**:
+   ```bash
+   npm install
+   ```
 
-| Faculty Dashboard | Admin Dashboard |
-|-------------------|-----------------|
-| Add Screenshot | Add Screenshot |
+2. **Configure Secrets**: Ensure your `.env` contains:
+   ```env
+   GEMINI_API_KEY="YOUR_GEMINI_KEY"
+   ```
 
-| Analytics | AI Assistant |
-|-----------|--------------|
-| Add Screenshot | Add Screenshot |
+3. **Launch Local Server**:
+   ```bash
+   npm run dev
+   ```
+   *Note: Server boots on port `3000` automatically mapping to reverse proxies.*
 
----
-
-## 🔮 Future Enhancements
-
-- Face Recognition Attendance
-- AI Timetable Generator
-- Blockchain Certificate Verification
-- Mobile Application
-- Online Examination Portal
-- Live GPS Bus Tracking
-- Smart Campus IoT Integration
+4. **Production Compilation**:
+   ```bash
+   npm run build
+   ```
 
 ---
 
-## 👩‍💻 Developer
+## 🌐 Deployment & Security
 
-**Ananya S**
-
-🎓 B.E. Artificial Intelligence & Machine Learning
-
-📧 **ananya.bolar@gmail.com**
-
-💼 **LinkedIn:** https://www.linkedin.com/in/ananyabolar/
-
----
-
-<div align="center">
-
-## ⭐ Star this repository if you found it useful!
-
-### Empowering Educational Institutions Through Intelligent Digital Transformation
-
-</div>
+Deploy directly via Cloud Run containers. Database records are compiled in an optimized static buffer which automatically scales to scale-to-zero limits with zero third-party database dependency bottlenecks, keeping query operations at sub-millisecond rates.
 
 ---
 
 ## 📄 License
 
-Licensed under the **Apache License 2.0**.
+SPDX-License-Identifier: Apache-2.0

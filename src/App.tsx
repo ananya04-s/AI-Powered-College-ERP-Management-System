@@ -30,6 +30,7 @@ import StudentModule from './components/StudentModule';
 import FacultyModule from './components/FacultyModule';
 import AdminModule from './components/AdminModule';
 import ParentPortal from './components/ParentPortal';
+import GraduationForecast from './components/GraduationForecast';
 import { UserRole } from './types';
 
 export default function App() {
@@ -477,6 +478,8 @@ export default function App() {
                 ))}
               </div>
             </div>
+          ) : currentTab === 'graduation_forecast' ? (
+            <GraduationForecast userRole={currentUser?.role || 'Student'} userEmail={currentUser?.email} />
           ) : currentUser?.role === 'Student' ? (
             <StudentModule userEmail={currentUser?.email} activeSubTab={currentTab} />
           ) : currentUser?.role === 'Faculty' ? (

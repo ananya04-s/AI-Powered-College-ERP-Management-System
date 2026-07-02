@@ -19,7 +19,8 @@ import {
   LogOut, 
   ShieldAlert,
   ClipboardList,
-  Compass
+  Compass,
+  GraduationCap
 } from 'lucide-react';
 import { UserRole } from '../types';
 
@@ -43,6 +44,7 @@ export default function Sidebar({ currentTab, setCurrentTab, userRole, userName,
         { id: 'students', label: 'Manage Students', icon: Users },
         { id: 'faculty', label: 'Manage Faculty', icon: ClipboardList },
         { id: 'academics', label: 'Academics & Courses', icon: BookOpen },
+        { id: 'graduation_forecast', label: 'Graduation Forecast', icon: GraduationCap },
         { id: 'fees', label: 'Fee Collections', icon: CreditCard },
         { id: 'library', label: 'Central Library', icon: Library },
         { id: 'hostel', label: 'Hostel Rooms', icon: Home },
@@ -52,6 +54,7 @@ export default function Sidebar({ currentTab, setCurrentTab, userRole, userName,
       ],
       'College Admin': [
         { id: 'students', label: 'Manage Students', icon: Users },
+        { id: 'graduation_forecast', label: 'Graduation Forecast', icon: GraduationCap },
         { id: 'fees', label: 'Fee Collections', icon: CreditCard },
         { id: 'library', label: 'Central Library', icon: Library },
         { id: 'hostel', label: 'Hostel Rooms', icon: Home },
@@ -65,6 +68,7 @@ export default function Sidebar({ currentTab, setCurrentTab, userRole, userName,
       ],
       'Student': [
         { id: 'student_profile', label: 'Academic Profile', icon: Users },
+        { id: 'graduation_forecast', label: 'Graduation Forecast', icon: GraduationCap },
         { id: 'student_marks', label: 'My Grades', icon: FileSpreadsheet },
         { id: 'student_library', label: 'Central Library', icon: Library },
         { id: 'student_fees', label: 'My Fee Receipts', icon: CreditCard },
@@ -74,6 +78,7 @@ export default function Sidebar({ currentTab, setCurrentTab, userRole, userName,
       ],
       'Parent': [
         { id: 'parent_performance', label: 'Ward Analytics', icon: Compass },
+        { id: 'graduation_forecast', label: 'Graduation Forecast', icon: GraduationCap },
         { id: 'parent_attendance', label: 'Attendance Logs', icon: ClipboardList },
         { id: 'parent_fees', label: 'Ward Fee Status', icon: CreditCard },
       ]
